@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %title {company name}
+    = stylesheets :application
+    /[if IE]
+      = stylesheets :ie_hacks
+  %body
+    #wrapper
+      #branding
+  
+      %ul.menu#utility
+        %li= link "Home", "/"
+        %li= link "News"
+        %li= link "Contact"
+      
+      .clear
+      
+      %ul.menu#main
+        %li= link "Solutions"
+        %li= link "Products"
+        %li= link "Services"
+        %li= link "Support"
+        %li= link "Company"
+        %li= link "Blog"
+
+      .clear
+
+        = yield
+
+      .clear
+    
+      #footer
+        #contact
+          %p
+            {company name}
+            %br
+            Address
+            %br
+            Phone Number
+            %br
+            Fax
+            %br
+            Email
+        #legal
+          %p &copy; 2005 {company name}. All Rights Reserved
+          %p= link "Privacy Statement"
+          %p= link "Terms Of Use"
