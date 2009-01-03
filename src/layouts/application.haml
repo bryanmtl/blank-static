@@ -15,20 +15,23 @@
     #wrapper
       #branding
   
+      -# 
+        loc parameter enables site overlay to identify specific links in web 
+        analytics report
       %ul.menu#utility
-        %li= link "Home", "/"
-        %li= link "News"
-        %li= link "Contact"
+        %li= link "Home", "home.html?loc=util"
+        %li= link "News", "news.html?loc=util"
+        %li= link "Contact", "contact.html?loc=util"
       
       .clear
       
       %ul.menu#main
-        %li= link "Solutions"
-        %li= link "Products"
-        %li= link "Services"
-        %li= link "Support"
-        %li= link "Company"
-        %li= link "Blog"
+        %li= link "Solutions", "solutions.html?loc=main"
+        %li= link "Products", "products.html?loc=main"
+        %li= link "Services", "services.html?loc=main"
+        %li= link "Support", "support.html?loc=main"
+        %li= link "Company", "company.html?loc=main"
+        %li= link "Blog", "blog.html?loc=main"
 
       .clear
 
@@ -50,5 +53,5 @@
             Email
         #legal
           %p &copy; 2005 {company name}. All Rights Reserved
-          %p= link "Privacy Statement"
-          %p= link "Terms Of Use"
+          %p= link "Privacy Statement", "privacy.html?loc=footer"
+          %p= link "Terms Of Use", "terms.html?loc=footer"
