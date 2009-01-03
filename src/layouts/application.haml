@@ -5,7 +5,13 @@
     = stylesheets :application
     /[if IE]
       = stylesheets :ie_hacks
-  %body
+  -#
+    Set @page_template to provide page specific styling. Then you can do
+    something like this:
+      .home #sidebar
+        :display none
+  
+  %body{:id => "site-id", :class => "#{page_template}"}
     #wrapper
       #branding
   
