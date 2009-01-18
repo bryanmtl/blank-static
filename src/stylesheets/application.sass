@@ -1,103 +1,44 @@
-// The base font size of this template is 10px, which means 1em is 10px, 1.2em  
-// is 12px and so on.
-// 
-// The ems for the screen are actually multipliers of the document’s base font
-// size. The good practice is to set document’s font size to 10px (or if you
-// want it to be resizable by the Internet Explorer users, set it to 62.5%).
-// Reference: http://www.maratz.com/blog/archives/2005/10/21/typetesters-base-font-size/
+@import attributes.sass
+@import blueprint.sass
+@import blueprint/modules/grid.sass
+@import blueprint/modules/fancy_type.sass
 
-
-// =Reset
-
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td
-  :margin 0
-  :padding 0
-
-table
-  :border-collapse collapse
-  :border-spacing 0
-
-fieldset,img
-  :border 0
-
-address, caption, cite, code, dfn, em, strong, th, var
-  :font-style normal
-  :font-weight normal
-
-ol, ul
-  :list-style none
-  
-caption, th
-  :text-align left
-
-h1, h2, h3, h4, h5, h6
-  :font-size 100%
-
-q:before, q:after
-  :content ''
-
-// =Typography
-//----------------------------------------------------------------------------
-
-body
-  :font 62.5%/1.6em "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif
-
-p, ul
-  :margin-bottom 0.5em
-
-// =Layout
-//----------------------------------------------------------------------------
-
-// Class for clearing floats
-.clear
-  :clear both
-
-#wrapper
+.container
+  +container
 
 #branding
+  h2
+    +alt
+  
+#utility
+  +push(19)
+  +column(5, true)
 
+.menu-horizontal
+  +menu-horizontal
+  
+// .menu-vertical
+
+#secondary
+  +column(3)
+  +colborder
+  
 #content
-
-#main-content
+  +column(14)
+  +colborder
 
 #sidebar
+  +column(5, last)
+  
+#footer
+  +column(24)
+  
+#contact
+  +column(19)
 
-// =Headers  //----------------------------------------------------------------------------
-
-h1
-  :font
-    :size 1.3em
-  :margin-bottom 1em
-
-h2
-  :font
-    :size 1.2em
-
-h3
-  :font
-    :size 1.1em
-
-// =Links
-//----------------------------------------------------------------------------
-
-a:link, a:visited
-  :text-decoration none
-
-a:hover, a:active
-  :text-decoration underline
-
-// =Forms  //----------------------------------------------------------------------------
-
-// =Tables //----------------------------------------------------------------------------
-
-// =Branding //----------------------------------------------------------------------------
-
-// =Header Menu //----------------------------------------------------------------------------
-
-// =Utility Menu //----------------------------------------------------------------------------
-
-// =Secondary Menu //----------------------------------------------------------------------------
-
-// =Main Content //----------------------------------------------------------------------------
-
-// =Sidebar //----------------------------------------------------------------------------
+#legal
+  +column(5, true)
+  
+.showgrid
+  :background url(/images/grid.png)
+  

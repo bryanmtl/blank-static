@@ -1,57 +1,60 @@
 !!!
 %html
   %head
-    %title {company name}
-    = stylesheets :application
+    %title Firsthand Web Design
+    = stylesheets :screen, :application, :media => :screen
+    = stylesheets :print, :media => :print
     /[if IE]
-      = stylesheets :ie_hacks
-  -#
-    Set @page_template to provide page specific styling. Then you can do
-    something like this:
-      .home #sidebar
-        :display none
-  
-  %body{:id => "site-id", :class => "#{@page_template}"}
-    #wrapper
+      = stylesheets :ie
+  %body{:id => "site-id"}
+    .container
       #branding
-  
-      -# 
-        loc parameter enables site overlay to identify specific links in web 
-        analytics report
-      %ul.menu#utility
-        %li= link "Home", "home.html?loc=util"
-        %li= link "News", "news.html?loc=util"
-        %li= link "Contact", "contact.html?loc=util"
+        %h1 Firsthand Web Design
+
+        %h2 This is blank static using Haml, Sass, Compass and Blueprint CSS
+      #utility.menu-horizontal
+        %ul
+          %li= link "Home", "home.html?loc=util"
+          %li= link "News", "news.html?loc=util"
+          %li= link "Contact", "contact.html?loc=util"
+
+      #main.menu-horizontal
+        %ul
+          %li= link "Solutions", "solutions.html?loc=main"
+          %li= link "Products", "products.html?loc=main"
+          %li= link "Services", "services.html?loc=main"
+          %li= link "Support", "support.html?loc=main"
+          %li= link "Company", "company.html?loc=main"
+          %li= link "Blog", "blog.html?loc=main"
+          
+      %hr.space
+      %hr
       
-      .clear
-      
-      %ul.menu#main
-        %li= link "Solutions", "solutions.html?loc=main"
-        %li= link "Products", "products.html?loc=main"
-        %li= link "Services", "services.html?loc=main"
-        %li= link "Support", "support.html?loc=main"
-        %li= link "Company", "company.html?loc=main"
-        %li= link "Blog", "blog.html?loc=main"
-
-      .clear
-
-        = yield
-
-      .clear
+      #secondary.menu-vertical
+        = partial "contents"
     
+      #content
+        = yield
+      
+      #sidebar
+        = partial 'sidebar'
+    
+      %hr
       #footer
         #contact
           %p
-            {company name}
+            %a{:href => "http://www.firsthand.ca"} Firsthand Web Design
             %br
-            Address
+            410-5220 Jeanne Mance
             %br
-            Phone Number
+            Ph 555-555-1234
             %br
-            Fax
+            Fax 555-6666-1234
             %br
-            Email
+            %a{:href => "mailto:firsthand@example.com"} firsthand@example.com
         #legal
-          %p &copy; 2005 {company name}. All Rights Reserved
-          %p= link "Privacy Statement", "privacy.html?loc=footer"
-          %p= link "Terms Of Use", "terms.html?loc=footer"
+          %p 
+            &copy; 2009 Firsthand Web Design 
+            %br All Rights Reserved
+            %br= link "Privacy Statement", "privacy.html?loc=footer"
+            %br= link "Terms Of Use", "terms.html?loc=footer"
