@@ -3,42 +3,75 @@
 @import blueprint/modules/grid.sass
 @import blueprint/modules/fancy_type.sass
 
+.menu-horizontal
+  +menu-horizontal
+
+.menu-vertical
+  +menu-vertical
+
+// layout
+
+.showgrid
+  :background url(/images/grid.png)
+
 .container
   +container
 
-#branding
-  h2
-    +alt
-  
-#utility
-  +push(19)
-  +column(5, true)
+  #masthead
+    +column(24)
+    #branding
+      +column(19)
+      h2
+        +alt
 
-.menu-horizontal
-  +menu-horizontal
-  
-// .menu-vertical
+    #utility
+      +column(5, true)
 
-#secondary
-  +column(3)
-  +colborder
-  
-#content
-  +column(14)
-  +colborder
+    div#main
+      +column(24)
+      :width 948px
+      +dropdown-menu(7, 0.5)
+      :background #FFF
+      :border 1px solid #AAA
+      li
+        &:hover
+          :background #EBB
+        &.submenu
+          :background url(/images/dropmenu.gif) 95% 50% no-repeat
+          li.submenu        
+            background: url(/images/submenu.gif) 95% 50% no-repeat
+            &:hover
+              :background-color #EDD
+          &:hover
+            :background-color #EDD
+      ul
+        :background white
+        :border 1px solid #CCC
+        :border-width 0 1px
+        &.level3
+          :border-top 1px solid #CCC
+        ul
+          :position absolute
+          :display none
+          li
+            :border-bottom 1px solid #CCC
 
-#sidebar
-  +column(5, last)
+  #secondary
+    +column(3)
+    +colborder
   
-#footer
-  +column(24)
-  
-#contact
-  +column(19)
+  #content
+    +column(14)
+    +colborder
 
-#legal
-  +column(5, true)
+  #sidebar
+    +column(5, true)
   
-.showgrid
-  :background url(/images/grid.png)
+  #footer
+    +column(24)
   
+    #contact
+      +column(19)
+
+    #legal
+      +column(5, true)

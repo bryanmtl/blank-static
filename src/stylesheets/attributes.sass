@@ -6,3 +6,40 @@
     :display block
     :float left
     :margin-right 1em
+    
+=menu-vertical
+  :list-style none
+  
+// based on CSS-Driven Drop-down Menus from More Eric Meyer on CSS
+=dropdown-menu(!width, !padding)
+  li
+    :position relative
+    :list-style none
+    :margin 0
+    :float left
+    :width = !width + em
+    a
+      :display block
+      :text-decoration none
+      :padding = !padding/2 + em 0 !padding/2 + em !padding + em
+      :width = !width - !padding + em
+  ul
+    :margin 0
+    :padding 0
+    &.level2
+      :top 2em
+      :left -1px
+    &.level3
+      :top -1px 
+      :left = !width + em
+      :border-top 1px solid #CCC
+    ul
+      :position absolute
+      :display none
+      :width = !width
+    &.level1 li.submenu:hover ul.level2,
+    &.level2 li.submenu:hover ul.level3
+      :display block
+  &>ul a 
+    :width auto 
+    

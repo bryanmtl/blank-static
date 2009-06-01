@@ -32,24 +32,43 @@
       = stylesheets :ie
   %body{:id => "site-id"}
     .container
-      #branding
-        %h1 Firsthand Web Design
+      #masthead
+        #branding
+          %h1 Firsthand Web Design
 
-        %h2 This is blank static using Haml, Sass, Compass and Blueprint CSS
-      #utility.menu-horizontal
-        %ul
-          %li= link "Home", "home.html?loc=util"
-          %li= link "News", "news.html?loc=util"
-          %li= link "Contact", "contact.html?loc=util"
+          %h2 This is blank static using Haml, Sass, Compass and Blueprint CSS
+        #utility.menu-horizontal
+          %ul
+            %li= link "Home", "home.html?loc=util"
+            %li= link "News", "news.html?loc=util"
+            %li= link "Contact", "contact.html?loc=util"
 
-      #main.menu-horizontal
-        %ul
-          %li= link "Solutions", "solutions.html?loc=main"
-          %li= link "Products", "products.html?loc=main"
-          %li= link "Services", "services.html?loc=main"
-          %li= link "Support", "support.html?loc=main"
-          %li= link "Company", "company.html?loc=main"
-          %li= link "Blog", "blog.html?loc=main"
+        #main.menu-horizontal
+          %ul.level1
+            %li.submenu
+              = link "Solutions", "solutions.html?loc=main"
+              %ul.level2
+                %li=link "Global", "global.html?loc=main"
+                %li=link "Small Business", "small_business.html?loc=main"
+            %li.submenu
+              = link "Products", "products.html?loc=main"
+              %ul.level2
+                %li=link "Enterprise", "enterprise.html?loc=main"
+                %li=link "Trial", "trial.html?loc=main"
+            %li=link "Services", "services.html?loc=main"
+            %li=link "Support", "support.html?loc=main"
+            %li.submenu
+              =link "Company", "company.html?loc=main"
+              %ul.level2
+                %li.submenu
+                  =link "News", "news.html?loc=main"
+                  %ul.level3
+                    %li=link "Press Releases"
+                    %li=link "Media Coverage"                
+                %li=link "Events", "events.html?loc=main" 
+                %li=link "Management", "management.html?loc=main"
+                %li=link "Contact", "contact.html?loc=main"
+            %li= link "Blog", "blog.html?loc=main"
           
       %hr.space
       %hr
