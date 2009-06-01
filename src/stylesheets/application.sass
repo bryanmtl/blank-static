@@ -1,77 +1,10 @@
-@import attributes.sass
-@import blueprint.sass
 @import blueprint/modules/grid.sass
 @import blueprint/modules/fancy_type.sass
+@import compass/utilities.sass
+@import colors.sass
+@import mixins.sass
+@import typography.sass
+@import grid.sass
+@import menus.sass
+@import forms.sass
 
-.menu-horizontal
-  +menu-horizontal
-
-.menu-vertical
-  +menu-vertical
-
-// layout
-
-.showgrid
-  :background url(/images/grid.png)
-
-.container
-  +container
-
-  #masthead
-    +column(24)
-    #branding
-      +column(19)
-      h2
-        +alt
-
-    #utility
-      +column(5, true)
-
-    div#main
-      +column(24)
-      :width 948px
-      +dropdown-menu(7, 0.5)
-      :background #FFF
-      :border 1px solid #AAA
-      li
-        &:hover
-          :background #EBB
-        &.submenu
-          :background url(/images/dropmenu.gif) 95% 50% no-repeat
-          li.submenu        
-            background: url(/images/submenu.gif) 95% 50% no-repeat
-            &:hover
-              :background-color #EDD
-          &:hover
-            :background-color #EDD
-      ul
-        :background white
-        :border 1px solid #CCC
-        :border-width 0 1px
-        &.level3
-          :border-top 1px solid #CCC
-        ul
-          :position absolute
-          :display none
-          li
-            :border-bottom 1px solid #CCC
-
-  #secondary
-    +column(3)
-    +colborder
-  
-  #content
-    +column(14)
-    +colborder
-
-  #sidebar
-    +column(5, true)
-  
-  #footer
-    +column(24)
-  
-    #contact
-      +column(19)
-
-    #legal
-      +column(5, true)
