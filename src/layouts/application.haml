@@ -27,13 +27,10 @@
 
     %meta{:name => "verify-v1", :content => "add google webmaster verification key" }
 
-    %script{:type=>"text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"}
+    = javascripts("http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js", "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js", "/javascripts/application.js")
+
     %script{:language=>"javascript", :type=>"text/javascript"}
       jQuery.noConflict();
-    %script{:type=>"text/javascript", :src => "/javascripts/application.js"}
-
-    %script{:type=>"text/javascript", :src => "http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js"}
-    %script{:type=>"text/javascript"}
       firebug.env.height = 100;
 
     = stylesheets :screen, :application, :media => :screen
@@ -114,3 +111,4 @@
             = link "Privacy Statement", "privacy.html?ref=footer"
             %br
             = link "Terms Of Use", "terms.html?ref=footer"
+            
