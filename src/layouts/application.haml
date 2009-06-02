@@ -33,10 +33,7 @@
 
           %h2 This is blank static using Haml, Sass, Compass and Blueprint CSS
         #utility
-          %ul
-            %li= link "Home", "/?ref=util"
-            %li= link "News", "news.html?ref=util"
-            %li= link "Contact", "contact.html?ref=util"
+          = partial "utility" 
 
         #main
           = partial "menu"
