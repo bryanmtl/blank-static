@@ -45,6 +45,11 @@ module FirsthandHelper
       meta("http-equiv" => "pics-Label", :content => label)
   end
 
+  # Used with the mixin "+round-corners"
+  def round_corners
+    %{<b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b>}
+  end
+
   private
 
     # Specialized tag for meta as the default method <tt>tab</tt> converts name
