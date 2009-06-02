@@ -3,31 +3,24 @@
   %head
     %title Firsthand Web Design
 
-    %meta{:name => "language", :content => "en"}
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
-    %meta{"http-equiv" => "content-style-type", :content => "text/css"}
-    %meta{:name => "description", :content => "#{@meta_description}"}
-    %meta{:name => "abstract", :content => "#{@meta_abstract}"}
-    %meta{:name => "keywords", :content => "#{@meta_keywords}"}
-    %meta{:name => "author", :content => "Firsthand Web Design, Montreal (www.firsthand.ca)"}
-    %meta{:name => "Owner", :content => "Nicholas Henry" }
-    %link{:rel => "icon", :href => "favicon.ico" }
+    = abstract @meta_abstract || ""
+    = author "Firsthand Web Design, Montreal (www.firsthand.ca)"
+    = char_set "UTF-8"
+    = description @meta_description || ""
+    = keywords @meta_keywords || ""
+    = language "en"
+    = owner "Nicholas Henry"
+    = robots "index, follow"
+   
+    = dublin_core :publisher => "Firsthand Web Design", :language => "en-US", :date => "2009-02-09", :rights => "© Copyright Firsthand Web Design 2008, 2009"
 
-    %meta{:name => "Robots", :content => "index, follow"}
+    = fav_icon
 
-    %link{:href => "http://purl.org/DC/elements/1.0/", :rel => "schema.DC"}
-    %meta{:name => "DC.Publisher", :content => "Firsthand Web Design" }
-    %meta{:name => "DC.Language", :content => "en-US", :scheme => "rfc1766" }
-    %meta{:name => "DC.Date", :content => "2009-02-09", :scheme => "iso8601" }
-    %meta{:name => "DC.Rights", :content => "© Copyright Firsthand Web Design 2008, 2009" }
+    = google_verify "add-google-webmaster-verification-key"
 
-    -# A new label should be generated for each site
-    %link{:rel => "meta", :href => "http://www.firsthand.ca/labels.rdf", :type => "application/rdf+xml", :title => "ICRA labels"}
-    %meta{"http-equiv" => "pics-Label", :content => '(pics-1.1 "http://www.icra.org/pics/vocabularyv03/" l gen true for "http://firsthand.ca" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for "http://www.firsthand.ca" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))' }
+    = irca_label "(pics-1.1 'http://www.icra.org/pics/vocabularyv03/' l gen true for 'http://firsthand.ca' r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for 'http://www.firsthand.ca' r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))"
 
-    %meta{:name => "verify-v1", :content => "add google webmaster verification key" }
-
-    = javascripts("http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js", "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js", "/javascripts/application.js")
+    = javascripts "http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js", "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js", "/javascripts/application.js"
 
     %script{:language=>"javascript", :type=>"text/javascript"}
       jQuery.noConflict();
@@ -37,6 +30,7 @@
     = stylesheets :print, :media => :print
     /[if IE]
       = stylesheets :ie
+
   %body{:id => "site-id"}
     .container
       #masthead
@@ -91,24 +85,5 @@
     
       %hr
       #footer
-        #contact
-          %p
-            %a{:href => "http://www.firsthand.ca"} Firsthand Web Design
-            %br
-            410-5220 Jeanne Mance
-            %br
-            Ph 555-555-1234
-            %br
-            Fax 555-6666-1234
-            %br
-            %a{:href => "mailto:firsthand@example.com"} firsthand@example.com
-        #legal
-          %p 
-            &copy; 2009 Firsthand Web Design 
-            %br
-            All Rights Reserved
-            %br
-            = link "Privacy Statement", "privacy.html?ref=footer"
-            %br
-            = link "Terms Of Use", "terms.html?ref=footer"
+        = partial 'footer'
             
