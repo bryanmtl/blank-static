@@ -20,12 +20,6 @@
 
     = irca_label "(pics-1.1 'http://www.icra.org/pics/vocabularyv03/' l gen true for 'http://firsthand.ca' r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for 'http://www.firsthand.ca' r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))"
 
-    = javascripts "http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js", "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js", "/javascripts/application.js"
-
-    %script{:language=>"javascript", :type=>"text/javascript"}
-      jQuery.noConflict();
-      firebug.env.height = 100;
-
     = stylesheets :screen, :application, :media => :screen
     = stylesheets :print, :media => :print
     /[if IE]
@@ -62,4 +56,10 @@
       %hr
       #footer
         = partial 'footer'
+
+    = javascripts "http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js", "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js", "/javascripts/application.js"
+
+    %script{:language=>"javascript", :type=>"text/javascript"}
+      jQuery.noConflict();
+      firebug.env.height = 100;
             
