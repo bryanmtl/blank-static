@@ -32,23 +32,14 @@
           %h1 Firsthand Web Design
 
           %h2 This is blank static using Haml, Sass, Compass and Blueprint CSS
-        #utility
-          = partial "utility" 
 
-        #main
-          = partial "menu"
+        = partial "utility" 
+        = partial "menu"
           
       %hr.space
       %hr
 
-      #secondary
-        = partial "contents"
-    
-      #content
-        = yield
-      
-      #sidebar
-        = partial 'sidebar'
+      = yield
     
       %hr
       #footer
