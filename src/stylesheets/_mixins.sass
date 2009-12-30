@@ -66,19 +66,21 @@
   ul
     :margin 0
     :padding 0
-    &.level2
+    ul
       :top 2em
       :left -1px
-    &.level3
-      :top -1px 
-      :left = !width + em
-      :border-top 1px solid #CCC
-    ul
       :position absolute
       :display none
       :width = !width
-    &.level1 li.submenu:hover ul.level2,
-    &.level2 li.submenu:hover ul.level3
+      ul
+        :top -1px 
+        :left = !width + em
+        :border-top 1px solid #CCC
+    li.has_children:hover ul
+      :display block
+      ul
+        :display none
+    ul li.has_children:hover ul
       :display block
   &>ul a 
     :width auto

@@ -1,23 +1,23 @@
 #menu-main
-  %ul.level1
-    %li.submenu
+  %ul
+    %li.has_children
       = link "Solutions", "solutions.html?ref=main"
-      %ul.level2
+      %ul
         %li=link "Global", "global.html?ref=main"
         %li=link "Small Business", "small_business.html?ref=main"
-    %li.submenu
+    %li.has_children
       = link "Products", "products.html?ref=main"
-      %ul.level2
+      %ul
         %li=link "Enterprise", "enterprise.html?ref=main"
         %li=link "Trial", "trial.html?ref=main"
     %li=link "Services", "services.html?ref=main"
     %li=link "Support", "support.html?ref=main"
-    %li.submenu
+    %li.has_children
       =link "Company", "company.html?ref=main"
-      %ul.level2
-        %li.submenu
+      %ul
+        %li.has_children
           =link "News", "news.html?ref=main"
-          %ul.level3
+          %ul
             %li=link "Press Releases"
             %li=link "Media Coverage"                
         %li=link "Events", "events.html?ref=main" 

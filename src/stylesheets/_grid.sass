@@ -16,35 +16,6 @@
     #utility
       +column(5, true)
 
-    div#menu-main
-      +column(24)
-      :width 948px
-      +dropdown-menu(7, 0.5)
-      :background #FFF
-      :border 1px solid #AAA
-      li
-        &:hover
-          :background #EBB
-        &.submenu
-          :background url(/images/dropmenu.gif) 95% 50% no-repeat
-          li.submenu        
-            background: url(/images/submenu.gif) 95% 50% no-repeat
-            &:hover
-              :background-color #EDD
-          &:hover
-            :background-color #EDD
-      ul
-        :background white
-        :border 1px solid #CCC
-        :border-width 0 1px
-        &.level3
-          :border-top 1px solid #CCC
-        ul
-          :position absolute
-          :display none
-          li
-            :border-bottom 1px solid #CCC
-
   #sub-menu
     +column(3)
     +colborder
