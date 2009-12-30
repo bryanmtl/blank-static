@@ -22,7 +22,7 @@
 
     = stylesheets :screen, :application, :media => :screen
     = stylesheets :print, :media => :print
-    /[if IE]
+    /[if lt IE 8]
       = stylesheets :ie
 
   %body{:id => "site-id"}
