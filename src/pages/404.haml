@@ -1,17 +1,26 @@
-%h2 Page Not Found
+.not-found
+  #sub-menu
+    = partial "contents"
 
-%p Sorry, the page you are trying to view is not here.
+  #content
+    %h2 Page Not Found
 
-%h3 Now what?
+    %p Sorry, the page you are trying to view is not here.
 
-%p Did you follow a link from somewhere else at Firsthand Web Design? If you reached this page from another part of Firsthand Web Design, please email us at {email} so we can correct our mistake.
+    %h3 Now what?
 
-%p Did you follow a link from another site? Links from other sites can sometimes be outdated or misspelled. Email us at {email} where you came from and we can try to contact the other site in order to fix the problem. Did you type the URL? You may have typed the address (URL) incorrectly. Check to make sure you've got the exact right spelling, capitalization, etc.
+    %p Did you follow a link from somewhere else at Firsthand Web Design? If you reached this page from another part of Firsthand Web Design, please email us at {email} so we can correct our mistake.
 
-%h3 Some Popular Links
+    %p Did you follow a link from another site? Links from other sites can sometimes be outdated or misspelled. Email us at {email} where you came from and we can try to contact the other site in order to fix the problem. Did you type the URL? You may have typed the address (URL) incorrectly. Check to make sure you've got the exact right spelling, capitalization, etc.
 
-%p
-  %ul
-    %li= link "Solutions"
-    %li= link "Products"
-    %li= link "Company"  
+    %h3 Some Popular Links     
+
+  %p
+    %ul
+      %li= link "Solutions"
+      %li= link "Products"
+      %li= link "Company"
+
+  #side-bar
+    = partial 'sidebar'
+ 
