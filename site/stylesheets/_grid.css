@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <style type='text/css'>
+      body { font-family: helvetica, verdana, arial; font-size: 10pt;}
+    </style>
+  </head>
+  <body>
+    <h1>
+      StaticMatic::TemplateError
+      in
+      ./src/stylesheets/_grid.sass
+    </h1>
+    <p>Undefined mixin 'container'.</p>
+    4:   :background url(/images/grid.png)<br/>5: <br/>6: .container<br/>7:   +container<br/>8: <br/>9:   #masthead<br/>10:     +column(24)<br/>
+    <h2>Backtrace</h2>
+    (sass):7<br/>(sass):7<br/>(sass):7<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/mixin_node.rb:27:in `_perform'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:158:in `perform'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:202:in `perform_children'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:202:in `map'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:202:in `perform_children'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:193:in `perform!'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/rule_node.rb:159:in `perform!'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:181:in `_perform'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:158:in `perform'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:202:in `perform_children'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:202:in `map'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:202:in `perform_children'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:193:in `perform!'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:181:in `_perform'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:158:in `perform'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/tree/node.rb:103:in `render'<br/>/Library/Ruby/Gems/1.8/gems/haml-2.2.13/lib/sass/engine.rb:148:in `to_css'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/mixins/render.rb:81:in `generate_css'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/mixins/build.rb:21:in `build_css'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/mixins/build.rb:19:in `each'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/mixins/build.rb:19:in `build_css'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/mixins/build.rb:4:in `build'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/base.rb:58:in `send'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/../lib/staticmatic/base.rb:58:in `run'<br/>/Library/Ruby/Gems/1.8/gems/staticmatic-0.10.1/bin/staticmatic:23<br/>/usr/bin/staticmatic:19:in `load'<br/>/usr/bin/staticmatic:19
+  </body>
+</html>
