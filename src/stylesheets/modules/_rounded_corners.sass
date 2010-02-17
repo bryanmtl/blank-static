@@ -1,0 +1,49 @@
+// You must use the round_corners as the last element in the container you
+// want to have rounded corners
+=round-corners(!image="/images/dt_round_white.png", !top_left=true, !top_right=true, !bottom_right=true, !bottom_left=true)
+  padding: 0px
+  position: relative
+
+  b.cn
+    background = "transparent" url(!image) "no-repeat" "scroll" 0%
+    height: 10px
+    position: absolute
+    width: 10px
+
+  @if !top_left
+    b.tl 
+      background-position: left top
+      left: -1px
+      top: -1px
+  @else
+    b.tl
+      background-image: none
+
+  @if !top_right
+    b.tr 
+      background-position: right top
+      right: -1px
+      top: -1px
+  @else
+    b.tr
+      background-image: none
+
+
+  @if !bottom_right
+    b.br 
+      background-position: right bottom
+      bottom: -1px
+      right: -1px
+  @else
+    b.br
+      background-image: none
+
+
+  @if !bottom_left
+    b.bl 
+      background-position: left bottom
+      bottom: -1px
+      left: -1px
+  @else
+    b.bl
+      background-image: none

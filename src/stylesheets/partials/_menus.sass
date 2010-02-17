@@ -1,0 +1,36 @@
+// TODO: setup menus
+
+div#menu-main
+  +column(24)
+  width: 948px
+  +dropdown-menu(8em, 0.5em)
+  background: #FFF
+  border: 1px solid #AAA
+  li
+    &:hover
+      background: #EBB
+    &.has_children
+      background: url(/images/dropmenu.gif) 95% 50% no-repeat
+      li.has_children        
+        background: url(/images/submenu.gif) 95% 50% no-repeat
+        &:hover
+          background-color: #EDD
+      &:hover
+        background-color: #EDD
+  ul
+    background: white
+    border: 1px solid #CCC
+    border-width: 0 1px
+    ul
+      position: absolute
+      display: none
+      ul
+        border-top: 1px solid #CCC            
+      li
+        border-bottom: 1px solid #CCC
+
+#utility ul
+  +horizontal-list
+
+#sub-menu ul
+  +no-bullets
