@@ -3,3 +3,11 @@ h2. About Blank Static
 Blank static uses Haml, Sass, Compass with Blueprint CSS. Please view the the "Compass Wiki":http://wiki.github.com/chriseppstein/compass to learn about Compass and installation.
 
 To get familiar with Blueprint check out the "quick start tutorial":http://wiki.github.com/joshuaclayton/blueprint-css/quick-start-tutorial
+
+h2. Getting Started
+
+<pre>
+  $ (sudo) gem install haml compass staticmatic
+  $ cd ./blank-static
+  $ staticmatic preview .
+</pre>
